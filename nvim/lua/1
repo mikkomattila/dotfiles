@@ -1,8 +1,0 @@
-local opt = vim.opt
-
-vim.wo.relativenumber = true
-opt.number = true
-
-vim.scriptencoding = "utf-8"
-vim.fileencoding = "utf-8"
-opt.encodin = "utf-8"
