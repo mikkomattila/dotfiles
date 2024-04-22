@@ -1,4 +1,6 @@
 # Mikko's zsh
+export XDG_CONFIG_HOME="$HOME/.dotfiles"
+
 unsetopt correct_all
 
 # ------------------------------ Prompt ----------------------------------------
