@@ -1,4 +1,6 @@
-# Mikko's dotfiles
+# dotfiles
+
+Collection of various dotfiles I use.
 
 ## Installation
 
