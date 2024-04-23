@@ -2,6 +2,7 @@
 export XDG_CONFIG_HOME="$HOME/.dotfiles"
 
 unsetopt correct_all
+setopt auto_cd
 
 # ------------------------------ Prompt ----------------------------------------
 autoload -Uz vcs_info
@@ -32,7 +33,9 @@ alias mkdir='mkdir -p'
 alias ..='cd ..'
 alias cp='cp -v'
 alias rm='rm -I'
+alias rmdir='rmdir -i'
 alias mv='mv -iv'
+alias vim='nvim'
 alias ln='ln -sriv'
 
 # Colors
@@ -40,3 +43,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+
+
+eval "$(fzf --zsh)"

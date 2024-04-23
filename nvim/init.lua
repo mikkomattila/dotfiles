@@ -1,2 +1,2 @@
 require "options"
-require "plugin"
+require "plugins/lazy-nvim"
