@@ -1,19 +1,17 @@
-# Mikko's zsh
+# ------------------------------ General ---------------------------------------
 export XDG_CONFIG_HOME="$HOME/.dotfiles"
 
 unsetopt correct_all
 setopt auto_cd
+setopt prompt_subst
 
 # ------------------------------ Prompt ----------------------------------------
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
 
-PROMPT=$'%F%B%F{%(#.blue.green)}%n%b%F{%(#.blue.green)}%B%F{reset} %(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)} %F{yellow}${vcs_info_msg_0_}%f'
-PROMPT+=$'\n%B%(#.%F{red}#.%F{cyan})%b%F{reset}'
-# RPROMPT='%D{%H:%M:%S}'
+PROMPT=$'%F%B%F{%(#.blue.green)}%D{%H:%M:%S}%b%F{%(#.blue.green)}%B%F{reset} %(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)} %F{yellow}${vcs_info_msg_0_}%f\n%B%(#.%F{red}#.%F{cyan})%b%F{reset}'
 
 # ------------------------------ Autocompletion --------------------------------
 autoload -Uz compinit
